@@ -7,7 +7,7 @@ Adapted from https://gist.github.com/Juszczak/63e6d9e01decc850de03
 # Usage
 
 ```ts
-import { encode, decode } from "as-base64;
+import { encode, decode } from "as-base64";
 
 const input = "c29tZSBzdHJpbmc=";
 
