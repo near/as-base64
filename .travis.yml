@@ -4,11 +4,14 @@ node_js:
   - "11"
   - "12"
 
+
 jobs:
   include:
     - name: yarn
+      before_script: 
+        - yarn
       script:
-      - yarn test
+        - yarn test
 
     - name: fossa
       before_script:
