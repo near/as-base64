@@ -1,15 +1,16 @@
 (module
- (type $none_=>_none (func))
  (type $i32_i32_=>_none (func (param i32 i32)))
+ (type $none_=>_none (func))
  (type $i32_i32_=>_i32 (func (param i32 i32) (result i32)))
  (type $i32_=>_i32 (func (param i32) (result i32)))
- (type $i32_=>_none (func (param i32)))
- (type $i32_i32_i32_=>_i32 (func (param i32 i32 i32) (result i32)))
  (type $i32_i32_i32_i32_=>_i32 (func (param i32 i32 i32 i32) (result i32)))
+ (type $i32_=>_none (func (param i32)))
  (type $i32_i32_i32_=>_none (func (param i32 i32 i32)))
+ (type $i32_i32_i32_=>_i32 (func (param i32 i32 i32) (result i32)))
  (type $i32_i32_i32_i32_=>_none (func (param i32 i32 i32 i32)))
  (type $i32_i32_i32_i32_i32_=>_i32 (func (param i32 i32 i32 i32 i32) (result i32)))
  (type $i32_i32_i32_i32_i32_i32_i32_i32_i32_i32_i32_i32_i32_=>_i32 (func (param i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) (result i32)))
+ (type $i32_i32_i32_i32_f64_=>_i32 (func (param i32 i32 i32 i32 f64) (result i32)))
  (import "env" "memory" (memory $0 1))
  (data (i32.const 12) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00R\00o\00u\00n\00d\00 \00t\00r\00i\00p\00\00\00\00\00\00\00\00\00")
  (data (i32.const 60) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\004\00\00\00s\00h\00o\00u\00l\00d\00 \00h\00a\00n\00d\00l\00e\00 \00e\00m\00p\00t\00y\00 \00o\00b\00j\00e\00c\00t\00\00\00\00\00\00\00\00\00")
@@ -97,8 +98,16 @@
  (data (i32.const 4940) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00 \00\00\00s\00o\00m\00e\00 \00l\00o\00n\00g\00 \00s\00t\00r\00i\00n\00g\00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 5004) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\000\00\00\00c\002\009\00t\00Z\00S\00B\00s\00b\002\005\00n\00I\00H\00N\000\00c\00m\00l\00u\00Z\00w\00=\00=\00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 5084) "\1c\00\00\00\00\00\00\00\00\00\00\00\n\00\00\00\08\00\00\00\15\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 5116) "\1c\00\00\00\00\00\00\00\00\00\00\00\n\00\00\00\08\00\00\00\16\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 5148) "\1c\00\00\00\00\00\00\00\00\00\00\00\n\00\00\00\08\00\00\00\17\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 5116) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\18\00\00\00t\00e\00s\00t\00 \00i\00n\00v\00a\00l\00i\00d\00\00\00\00\00")
+ (data (i32.const 5164) "\cc\07\00\00\00\00\00\00\00\00\00\00\01\00\00\00\b6\07\00\00e\00y\00J\00u\00Y\00W\001\00l\00I\00j\00o\00g\00I\00l\00R\003\00a\00W\004\00g\00R\00m\00x\00h\00b\00W\00V\00z\00I\00C\00M\000\00O\00S\004\00g\00Q\00W\00x\005\00c\002\009\00u\00I\00C\00Y\00g\00Q\002\009\001\00c\00n\00R\00u\00Z\00X\00k\00g\00Q\00W\00x\00p\00Y\00W\005\00v\00I\00i\00w\00i\00a\00W\001\00h\00Z\002\00U\00i\00O\00i\00A\00i\00a\00H\00R\000\00c\00H\00M\006\00L\00y\009\00h\00c\00n\00d\00l\00Y\00X\00Z\00l\00L\00m\005\00l\00d\00C\009\00v\00M\00D\00h\00S\00U\00V\00B\00T\00T\00n\00N\00o\00S\00z\00Y\00y\00b\00m\00N\00F\00c\000\00N\00s\00R\00j\00R\00p\00W\00j\00N\00i\00M\00V\00p\00K\00Y\00n\00R\00C\00S\00F\00d\00M\00T\00U\005\004\00N\00V\00h\00f\00V\00F\00I\000\00I\00i\00w\00i\00Y\00W\00x\000\00X\002\00l\00t\00Y\00W\00d\00l\00I\00j\00o\00g\00I\00m\00h\000\00d\00H\00B\00z\00O\00i\008\00v\00a\00X\00B\00m\00c\00y\005\00p\00b\00y\009\00p\00c\00G\00Z\00z\00L\001\00F\00t\00T\00m\001\00r\00d\00G\00N\00u\00M\00m\00R\00u\00Q\00U\005\00K\00a\00T\00I\001\00Z\000\00Z\00p\00Y\00n\00d\00t\00R\00V\00Z\002\00Z\00V\00N\00Z\00U\003\00N\00B\00a\00G\00d\00L\00N\000\001\00L\00d\001\00d\00B\00S\00n\00o\00y\00Z\00X\00Y\00i\00L\00C\00J\00k\00Z\00X\00N\00j\00c\00m\00l\00w\00d\00G\00l\00v\00b\00i\00I\006\00I\00C\00J\00U\00a\00X\00R\00s\00Z\00T\00o\00g\00Q\00W\00x\005\00c\002\009\00u\00I\00C\00Y\00g\00Q\002\009\001\00c\00n\00R\00u\00Z\00X\00k\00g\00Q\00W\00x\00p\00Y\00W\005\00v\00X\00G\005\00c\00b\00k\00F\00y\00d\00G\00l\00z\00d\00D\00o\00g\00S\00n\00V\00z\00d\00G\00l\00u\00I\00E\00F\002\00Z\00X\00J\00z\00Y\00W\005\00v\00X\00G\005\00c\00b\00k\001\00l\00Z\00G\00l\001\00b\00T\00o\00g\00Q\00y\000\000\00M\00S\00B\00Q\00a\00G\009\000\00b\002\00d\00y\00Y\00X\00B\00o\00a\00W\00M\00g\00U\00H\00J\00p\00b\00n\00R\00c\00b\00l\00x\00u\00R\00G\00l\00t\00Z\00W\005\00z\00a\00W\009\00u\00c\00z\00o\00g\00M\00T\00b\00i\00g\00J\000\00g\00e\00C\00A\00y\00M\00O\00K\00A\00n\00V\00x\00u\00X\00G\005\00Q\00c\00m\00l\00j\00Z\00T\00o\00g\00J\00D\00E\00s\00M\00D\00A\00w\00X\00G\005\00c\00b\00k\00V\00k\00a\00X\00R\00p\00b\002\004\006\00I\00D\00F\00c\00L\00z\00F\00c\00b\00l\00x\00u\00W\00W\00V\00h\00c\00j\00o\00g\00M\00j\00A\00x\00O\00F\00x\00u\00X\00G\005\00B\00Z\00G\00R\00p\00d\00G\00l\00v\00b\00m\00F\00s\00I\00E\00l\00u\00Z\00m\009\00y\00b\00W\00F\000\00a\00W\009\00u\00O\00i\00B\00U\00d\002\00l\00u\00c\00y\00B\00h\00c\00m\00U\00g\00d\00G\00h\00v\00d\00W\00d\00o\00d\00C\00B\000\00b\00y\00B\00i\00c\00m\00l\00u\00Z\00y\00B\00s\00d\00W\00N\00r\00I\00H\00R\00v\00I\00H\00R\00o\00b\003\00N\00l\00I\00H\00d\00o\00b\00y\00B\00z\00Z\00W\00U\00g\00d\00G\00h\00l\00b\00S\00B\00h\00b\00m\00Q\00g\00d\00G\009\001\00Y\002\00g\00g\00d\00G\00h\00l\00b\00S\00w\00g\00Y\00W\005\00k\00I\00H\00R\00o\00Z\00X\00k\00g\00Y\00X\00J\00l\00I\00H\00N\00o\00b\003\00d\00l\00c\00m\00V\00k\00I\00H\00d\00p\00d\00G\00g\00g\00Z\002\00l\00m\00d\00H\00M\00g\00Y\00W\005\00k\00I\00G\001\00v\00b\00m\00V\005\00I\00G\00Z\00y\00b\002\000\00g\00c\003\00R\00y\00Y\00W\005\00n\00Z\00X\00J\00z\00L\00i\00B\00U\00a\00G\00V\005\00I\00G\00F\00y\00Z\00S\00B\00y\00Z\00W\00d\00h\00c\00m\00R\00l\00Z\00C\00B\00h\00c\00y\00B\00i\00Z\00W\00F\00y\00Z\00X\00J\00z\00I\00G\009\00m\00I\00G\00h\00h\00c\00H\00B\00p\00b\00m\00V\00z\00c\00y\00w\00g\00Z\002\009\00v\00Z\00C\00B\00s\00d\00W\00N\00r\00I\00G\00F\00u\00Z\00C\00B\00y\00a\00W\00N\00o\00Z\00X\00M\00g\00Z\00m\009\00y\00I\00H\00R\00o\00Z\00W\00l\00y\00I\00H\00B\00h\00c\00m\00V\00u\00d\00H\00M\00s\00I\00G\00J\001\00d\00C\00B\00h\00b\00H\00N\00v\00I\00G\00F\00z\00I\00G\00Z\00h\00b\00W\00l\00s\00a\00W\00F\00y\00c\00y\00B\00v\00Z\00i\00B\000\00a\00G\00U\00g\00Z\002\009\00k\00c\00y\00w\00g\00d\002\00l\000\00a\00C\00B\00l\00e\00H\00R\00y\00Y\00W\009\00y\00Z\00G\00l\00u\00Y\00X\00J\005\00I\00H\00B\00v\00d\002\00V\00y\00c\00y\004\00i\00L\00C\00J\00w\00b\003\00d\00l\00c\00m\00V\00k\00Q\00n\00k\00i\00O\00i\00J\00o\00d\00H\00R\00w\00c\00z\00o\00v\00L\003\00d\003\00d\00y\005\00u\00Y\00W\001\00l\00b\00G\00V\00z\00c\00y\005\00p\00b\00y\008\00i\00f\00Q\00,\00\00\00\00\00\00\00")
+ (data (i32.const 7164) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1a\00\00\00~\00l\00i\00b\00/\00a\00r\00r\00a\00y\00.\00t\00s\00\00\00")
+ (data (i32.const 7212) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 7244) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 7276) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00U\00i\00n\00t\008\00A\00r\00r\00a\00y\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 7324) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\04\00\00\00u\008\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 7356) "\1c\00\00\00\00\00\00\00\00\00\00\00\n\00\00\00\08\00\00\00\16\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 7388) "\1c\00\00\00\00\00\00\00\00\00\00\00\n\00\00\00\08\00\00\00\17\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 7420) "\1c\00\00\00\00\00\00\00\00\00\00\00\n\00\00\00\08\00\00\00\18\00\00\00\00\00\00\00\00\00\00\00")
  (import "env" "abort" (func $~lib/builtins/abort (param i32 i32 i32 i32)))
  (import "__aspect" "createReflectedValue" (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/createReflectedValue (param i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) (result i32)))
  (import "__aspect" "attachStackTraceToReflectedValue" (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/attachStackTraceToReflectedValue (param i32)))
@@ -108,6 +117,8 @@
  (import "__aspect" "clearExpected" (func $node_modules/@as-pect/assembly/assembly/internal/Expected/clearExpected))
  (import "__aspect" "reportTestTypeNode" (func $node_modules/@as-pect/assembly/assembly/internal/Test/it (param i32 i32)))
  (import "__aspect" "reportGroupTypeNode" (func $node_modules/@as-pect/assembly/assembly/internal/Test/describe (param i32 i32)))
+ (import "__aspect" "createReflectedNumber" (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/createReflectedNumber (param i32 i32 i32 i32 f64) (result i32)))
+ (import "__aspect" "pushReflectedObjectValue" (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/__aspectPushReflectedObjectValue (param i32 i32)))
  (import "rtrace" "onstore" (func $~onstore (param i32 i32 i32 i32) (result i32)))
  (global $~lib/rt/stub/startOffset (mut i32) (i32.const 0))
  (global $~lib/rt/stub/offset (mut i32) (i32.const 0))
@@ -119,12 +130,12 @@
  (global $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.FAILED_MATCH i32 (i32.const 0))
  (global $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.SUCCESSFUL_MATCH i32 (i32.const 1))
  (global $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.DEFER_MATCH i32 (i32.const 2))
- (global $node_modules/@as-pect/assembly/assembly/internal/noOp/noOp i32 (i32.const 5168))
+ (global $node_modules/@as-pect/assembly/assembly/internal/noOp/noOp i32 (i32.const 7440))
  (global $node_modules/@as-pect/assembly/assembly/internal/log/ignoreLogs (mut i32) (i32.const 0))
- (global $~lib/memory/__heap_base i32 (i32.const 5180))
+ (global $~lib/memory/__heap_base i32 (i32.const 7452))
  (global $~started (mut i32) (i32.const 0))
- (table $0 24 funcref)
- (elem $0 (i32.const 1) $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|0 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|1 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|2 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|3 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|4 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|5 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|6 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|7 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|8 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|9 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|10 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|11 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|12 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|13 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|14 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|15 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|16 $start:assembly/__tests__/roundtrip.spec~anonymous|0 $start:assembly/__tests__/roundtrip.spec~anonymous|1~anonymous|0 $start:assembly/__tests__/roundtrip.spec~anonymous|1~anonymous|1 $start:assembly/__tests__/roundtrip.spec~anonymous|1~anonymous|2 $start:assembly/__tests__/roundtrip.spec~anonymous|1 $start:node_modules/@as-pect/assembly/assembly/internal/noOp~anonymous|0)
+ (table $0 25 funcref)
+ (elem $0 (i32.const 1) $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|0 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|1 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|2 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|3 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|4 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|5 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|6 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|7 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|8 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|9 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|10 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|11 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|12 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|13 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|14 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|15 $start:assembly/__tests__/roundtrip.spec~anonymous|0~anonymous|16 $start:assembly/__tests__/roundtrip.spec~anonymous|0 $start:assembly/__tests__/roundtrip.spec~anonymous|1~anonymous|0 $start:assembly/__tests__/roundtrip.spec~anonymous|1~anonymous|1 $start:assembly/__tests__/roundtrip.spec~anonymous|1~anonymous|2 $start:assembly/__tests__/roundtrip.spec~anonymous|1~anonymous|3 $start:assembly/__tests__/roundtrip.spec~anonymous|1 $start:node_modules/@as-pect/assembly/assembly/internal/noOp~anonymous|0)
  (export "__call" (func $node_modules/@as-pect/assembly/assembly/internal/call/__call))
  (export "__ignoreLogs" (func $node_modules/@as-pect/assembly/assembly/internal/log/__ignoreLogs))
  (export "memory" (memory $0))
@@ -3468,6 +3479,10 @@
   (local $10 i32)
   (local $11 i32)
   (local $12 i32)
+  (local $13 i32)
+  (local $14 i32)
+  (local $15 i32)
+  (local $16 i32)
   i32.const 0
   local.set $3
   local.get $0
@@ -3559,56 +3574,170 @@
    local.set $10
    local.get $10
    if
-    local.get $0
-    local.set $12
-    local.get $1
-    local.set $11
-    global.get $assembly/index/ALPHAVALUES
-    local.get $12
-    local.get $11
-    call $~lib/string/String#charCodeAt
-    call $~lib/staticarray/StaticArray<u8>#__get
+    block $assembly/index/getByte64|inlined.0 (result i32)
+     local.get $0
+     local.set $12
+     local.get $1
+     local.set $11
+     local.get $12
+     local.get $11
+     call $~lib/string/String#charCodeAt
+     local.set $13
+     local.get $13
+     i32.const 0
+     i32.lt_s
+     if (result i32)
+      i32.const 1
+     else
+      local.get $13
+      global.get $assembly/index/ALPHAVALUES
+      call $~lib/staticarray/StaticArray<u8>#get:length
+      i32.gt_s
+     end
+     if
+      i32.const -1
+      br $assembly/index/getByte64|inlined.0
+     end
+     global.get $assembly/index/ALPHAVALUES
+     local.get $13
+     call $~lib/staticarray/StaticArray<u8>#__get
+    end
+    local.set $13
+    block $assembly/index/getByte64|inlined.1 (result i32)
+     local.get $0
+     local.set $12
+     local.get $1
+     i32.const 1
+     i32.add
+     local.set $11
+     local.get $12
+     local.get $11
+     call $~lib/string/String#charCodeAt
+     local.set $14
+     local.get $14
+     i32.const 0
+     i32.lt_s
+     if (result i32)
+      i32.const 1
+     else
+      local.get $14
+      global.get $assembly/index/ALPHAVALUES
+      call $~lib/staticarray/StaticArray<u8>#get:length
+      i32.gt_s
+     end
+     if
+      i32.const -1
+      br $assembly/index/getByte64|inlined.1
+     end
+     global.get $assembly/index/ALPHAVALUES
+     local.get $14
+     call $~lib/staticarray/StaticArray<u8>#__get
+    end
+    local.set $14
+    block $assembly/index/getByte64|inlined.2 (result i32)
+     local.get $0
+     local.set $12
+     local.get $1
+     i32.const 2
+     i32.add
+     local.set $11
+     local.get $12
+     local.get $11
+     call $~lib/string/String#charCodeAt
+     local.set $15
+     local.get $15
+     i32.const 0
+     i32.lt_s
+     if (result i32)
+      i32.const 1
+     else
+      local.get $15
+      global.get $assembly/index/ALPHAVALUES
+      call $~lib/staticarray/StaticArray<u8>#get:length
+      i32.gt_s
+     end
+     if
+      i32.const -1
+      br $assembly/index/getByte64|inlined.2
+     end
+     global.get $assembly/index/ALPHAVALUES
+     local.get $15
+     call $~lib/staticarray/StaticArray<u8>#__get
+    end
+    local.set $15
+    block $assembly/index/getByte64|inlined.3 (result i32)
+     local.get $0
+     local.set $12
+     local.get $1
+     i32.const 3
+     i32.add
+     local.set $11
+     local.get $12
+     local.get $11
+     call $~lib/string/String#charCodeAt
+     local.set $16
+     local.get $16
+     i32.const 0
+     i32.lt_s
+     if (result i32)
+      i32.const 1
+     else
+      local.get $16
+      global.get $assembly/index/ALPHAVALUES
+      call $~lib/staticarray/StaticArray<u8>#get:length
+      i32.gt_s
+     end
+     if
+      i32.const -1
+      br $assembly/index/getByte64|inlined.3
+     end
+     global.get $assembly/index/ALPHAVALUES
+     local.get $16
+     call $~lib/staticarray/StaticArray<u8>#__get
+    end
+    local.set $16
+    local.get $13
+    i32.const -1
+    i32.eq
+    if (result i32)
+     i32.const 1
+    else
+     local.get $14
+     i32.const -1
+     i32.eq
+    end
+    if (result i32)
+     i32.const 1
+    else
+     local.get $15
+     i32.const -1
+     i32.eq
+    end
+    if (result i32)
+     i32.const 1
+    else
+     local.get $16
+     i32.const -1
+     i32.eq
+    end
+    if
+     i32.const 0
+     i32.const 0
+     call $~lib/typedarray/Uint8Array#constructor
+     return
+    end
+    local.get $13
     i32.const 18
     i32.shl
-    local.get $0
-    local.set $12
-    local.get $1
-    i32.const 1
-    i32.add
-    local.set $11
-    global.get $assembly/index/ALPHAVALUES
-    local.get $12
-    local.get $11
-    call $~lib/string/String#charCodeAt
-    call $~lib/staticarray/StaticArray<u8>#__get
+    local.get $14
     i32.const 12
     i32.shl
     i32.or
-    local.get $0
-    local.set $12
-    local.get $1
-    i32.const 2
-    i32.add
-    local.set $11
-    global.get $assembly/index/ALPHAVALUES
-    local.get $12
-    local.get $11
-    call $~lib/string/String#charCodeAt
-    call $~lib/staticarray/StaticArray<u8>#__get
+    local.get $15
     i32.const 6
     i32.shl
     i32.or
-    local.get $0
-    local.set $12
-    local.get $1
-    i32.const 3
-    i32.add
-    local.set $11
-    global.get $assembly/index/ALPHAVALUES
-    local.get $12
-    local.get $11
-    call $~lib/string/String#charCodeAt
-    call $~lib/staticarray/StaticArray<u8>#__get
+    local.get $16
     i32.or
     local.set $2
     local.get $8
@@ -3668,42 +3797,99 @@
      br_if $case1|1
      br $break|1
     end
-    local.get $0
-    local.set $12
-    local.get $1
-    local.set $11
-    global.get $assembly/index/ALPHAVALUES
-    local.get $12
-    local.get $11
-    call $~lib/string/String#charCodeAt
-    call $~lib/staticarray/StaticArray<u8>#__get
+    block $assembly/index/getByte64|inlined.4 (result i32)
+     local.get $0
+     local.set $12
+     local.get $1
+     local.set $11
+     local.get $12
+     local.get $11
+     call $~lib/string/String#charCodeAt
+     local.set $10
+     local.get $10
+     i32.const 0
+     i32.lt_s
+     if (result i32)
+      i32.const 1
+     else
+      local.get $10
+      global.get $assembly/index/ALPHAVALUES
+      call $~lib/staticarray/StaticArray<u8>#get:length
+      i32.gt_s
+     end
+     if
+      i32.const -1
+      br $assembly/index/getByte64|inlined.4
+     end
+     global.get $assembly/index/ALPHAVALUES
+     local.get $10
+     call $~lib/staticarray/StaticArray<u8>#__get
+    end
     i32.const 18
     i32.shl
-    local.get $0
-    local.set $11
-    local.get $1
-    i32.const 1
-    i32.add
-    local.set $10
-    global.get $assembly/index/ALPHAVALUES
-    local.get $11
-    local.get $10
-    call $~lib/string/String#charCodeAt
-    call $~lib/staticarray/StaticArray<u8>#__get
+    block $assembly/index/getByte64|inlined.5 (result i32)
+     local.get $0
+     local.set $14
+     local.get $1
+     i32.const 1
+     i32.add
+     local.set $13
+     local.get $14
+     local.get $13
+     call $~lib/string/String#charCodeAt
+     local.set $10
+     local.get $10
+     i32.const 0
+     i32.lt_s
+     if (result i32)
+      i32.const 1
+     else
+      local.get $10
+      global.get $assembly/index/ALPHAVALUES
+      call $~lib/staticarray/StaticArray<u8>#get:length
+      i32.gt_s
+     end
+     if
+      i32.const -1
+      br $assembly/index/getByte64|inlined.5
+     end
+     global.get $assembly/index/ALPHAVALUES
+     local.get $10
+     call $~lib/staticarray/StaticArray<u8>#__get
+    end
     i32.const 12
     i32.shl
     i32.or
-    local.get $0
-    local.set $10
-    local.get $1
-    i32.const 2
-    i32.add
-    local.set $12
-    global.get $assembly/index/ALPHAVALUES
-    local.get $10
-    local.get $12
-    call $~lib/string/String#charCodeAt
-    call $~lib/staticarray/StaticArray<u8>#__get
+    block $assembly/index/getByte64|inlined.6 (result i32)
+     local.get $0
+     local.set $16
+     local.get $1
+     i32.const 2
+     i32.add
+     local.set $15
+     local.get $16
+     local.get $15
+     call $~lib/string/String#charCodeAt
+     local.set $10
+     local.get $10
+     i32.const 0
+     i32.lt_s
+     if (result i32)
+      i32.const 1
+     else
+      local.get $10
+      global.get $assembly/index/ALPHAVALUES
+      call $~lib/staticarray/StaticArray<u8>#get:length
+      i32.gt_s
+     end
+     if
+      i32.const -1
+      br $assembly/index/getByte64|inlined.6
+     end
+     global.get $assembly/index/ALPHAVALUES
+     local.get $10
+     call $~lib/staticarray/StaticArray<u8>#__get
+    end
     i32.const 6
     i32.shl
     i32.or
@@ -3734,39 +3920,77 @@
     call $~lib/typedarray/Uint8Array#__set
     br $break|1
    end
-   local.get $0
-   local.set $12
-   local.get $1
-   local.set $11
-   global.get $assembly/index/ALPHAVALUES
-   local.get $12
-   local.get $11
-   call $~lib/string/String#charCodeAt
-   call $~lib/staticarray/StaticArray<u8>#__get
+   block $assembly/index/getByte64|inlined.7 (result i32)
+    local.get $0
+    local.set $12
+    local.get $1
+    local.set $11
+    local.get $12
+    local.get $11
+    call $~lib/string/String#charCodeAt
+    local.set $10
+    local.get $10
+    i32.const 0
+    i32.lt_s
+    if (result i32)
+     i32.const 1
+    else
+     local.get $10
+     global.get $assembly/index/ALPHAVALUES
+     call $~lib/staticarray/StaticArray<u8>#get:length
+     i32.gt_s
+    end
+    if
+     i32.const -1
+     br $assembly/index/getByte64|inlined.7
+    end
+    global.get $assembly/index/ALPHAVALUES
+    local.get $10
+    call $~lib/staticarray/StaticArray<u8>#__get
+   end
    i32.const 18
    i32.shl
-   local.get $0
-   local.set $11
-   local.get $1
-   i32.const 1
-   i32.add
-   local.set $10
-   global.get $assembly/index/ALPHAVALUES
-   local.get $11
-   local.get $10
-   call $~lib/string/String#charCodeAt
-   call $~lib/staticarray/StaticArray<u8>#__get
+   block $assembly/index/getByte64|inlined.8 (result i32)
+    local.get $0
+    local.set $14
+    local.get $1
+    i32.const 1
+    i32.add
+    local.set $13
+    local.get $14
+    local.get $13
+    call $~lib/string/String#charCodeAt
+    local.set $10
+    local.get $10
+    i32.const 0
+    i32.lt_s
+    if (result i32)
+     i32.const 1
+    else
+     local.get $10
+     global.get $assembly/index/ALPHAVALUES
+     call $~lib/staticarray/StaticArray<u8>#get:length
+     i32.gt_s
+    end
+    if
+     i32.const -1
+     br $assembly/index/getByte64|inlined.8
+    end
+    global.get $assembly/index/ALPHAVALUES
+    local.get $10
+    call $~lib/staticarray/StaticArray<u8>#__get
+   end
    i32.const 12
    i32.shl
    i32.or
    local.set $2
    local.get $8
    local.get $9
-   local.tee $11
+   local.tee $10
    i32.const 1
    i32.add
    local.set $9
-   local.get $11
+   local.get $10
    local.get $2
    i32.const 16
    i32.shr_u
@@ -5250,6 +5474,717 @@
   i32.const 5024
   call $assembly/__tests__/roundtrip.spec/testBase64
  )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<~lib/typedarray/Uint8Array>#set:actual (param $0 i32) (param $1 i32)
+  local.get $0
+  i32.const 4
+  i32.const 4
+  i32.const 0
+  call $~onstore
+  local.get $1
+  i32.store offset=4
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/stub/__link
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<~lib/typedarray/Uint8Array>#set:_not (param $0 i32) (param $1 i32)
+  local.get $0
+  i32.const 0
+  i32.const 4
+  i32.const 0
+  call $~onstore
+  local.get $1
+  i32.store
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<~lib/typedarray/Uint8Array>#constructor (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  i32.eqz
+  if
+   i32.const 8
+   i32.const 11
+   call $~lib/rt/stub/__new
+   local.set $0
+  end
+  local.get $0
+  i32.const 0
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<~lib/typedarray/Uint8Array>#set:_not
+  local.get $0
+  i32.const 0
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<~lib/typedarray/Uint8Array>#set:actual
+  local.get $0
+  local.get $1
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<~lib/typedarray/Uint8Array>#set:actual
+  local.get $0
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<~lib/typedarray/Uint8Array> (param $0 i32) (result i32)
+  i32.const 0
+  local.get $0
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<~lib/typedarray/Uint8Array>#constructor
+ )
+ (func $~lib/array/Array<usize>#__uget (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.load
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/pairSeen (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
+  local.get $0
+  local.get $2
+  i32.eq
+  local.get $1
+  local.get $3
+  i32.eq
+  i32.and
+  local.get $0
+  local.get $3
+  i32.eq
+  local.get $1
+  local.get $2
+  i32.eq
+  i32.and
+  i32.or
+ )
+ (func $~lib/typedarray/Uint8Array#__uget (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.add
+  i32.load8_u
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.equals<u8> (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
+  local.get $0
+  i32.const 255
+  i32.and
+  local.get $1
+  i32.const 255
+  i32.and
+  i32.eq
+  if
+   global.get $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.SUCCESSFUL_MATCH
+   return
+  end
+  i32.const 0
+  drop
+  i32.const 0
+  drop
+  i32.const 0
+  if (result i32)
+   i32.const 0
+   i32.eqz
+  else
+   i32.const 0
+  end
+  drop
+  global.get $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.FAILED_MATCH
+  return
+ )
+ (func $~lib/array/ensureCapacity (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  local.get $0
+  i32.load offset=8
+  local.set $4
+  local.get $1
+  local.get $4
+  local.get $2
+  i32.shr_u
+  i32.gt_u
+  if
+   local.get $1
+   i32.const 1073741820
+   local.get $2
+   i32.shr_u
+   i32.gt_u
+   if
+    i32.const 448
+    i32.const 7184
+    i32.const 17
+    i32.const 48
+    call $~lib/builtins/abort
+    unreachable
+   end
+   local.get $0
+   i32.load
+   local.set $5
+   local.get $1
+   local.tee $6
+   i32.const 8
+   local.tee $7
+   local.get $6
+   local.get $7
+   i32.gt_u
+   select
+   local.get $2
+   i32.shl
+   local.set $6
+   local.get $3
+   if
+    local.get $4
+    i32.const 1
+    i32.shl
+    local.tee $7
+    i32.const 1073741820
+    local.tee $8
+    local.get $7
+    local.get $8
+    i32.lt_u
+    select
+    local.tee $8
+    local.get $6
+    local.tee $7
+    local.get $8
+    local.get $7
+    i32.gt_u
+    select
+    local.set $6
+   end
+   local.get $5
+   local.get $6
+   call $~lib/rt/stub/__renew
+   local.set $8
+   local.get $8
+   local.get $4
+   i32.add
+   i32.const 0
+   local.get $6
+   local.get $4
+   i32.sub
+   call $~lib/memory/memory.fill
+   local.get $8
+   local.get $5
+   i32.ne
+   if
+    local.get $0
+    i32.const 0
+    i32.const 4
+    i32.const 0
+    call $~onstore
+    local.get $8
+    i32.store
+    local.get $0
+    i32.const 4
+    i32.const 4
+    i32.const 0
+    call $~onstore
+    local.get $8
+    i32.store offset=4
+    local.get $0
+    local.get $8
+    i32.const 0
+    call $~lib/rt/stub/__link
+   end
+   local.get $0
+   i32.const 8
+   i32.const 4
+   i32.const 0
+   call $~onstore
+   local.get $6
+   i32.store offset=8
+  end
+ )
+ (func $~lib/array/Array<usize>#set:length_ (param $0 i32) (param $1 i32)
+  local.get $0
+  i32.const 12
+  i32.const 4
+  i32.const 0
+  call $~onstore
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/array/Array<usize>#push (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=12
+  local.set $2
+  local.get $2
+  i32.const 1
+  i32.add
+  local.set $3
+  local.get $0
+  local.get $3
+  i32.const 2
+  i32.const 1
+  call $~lib/array/ensureCapacity
+  i32.const 0
+  drop
+  local.get $0
+  i32.load offset=4
+  local.get $2
+  i32.const 2
+  i32.shl
+  i32.add
+  i32.const 0
+  i32.const 4
+  i32.const 0
+  call $~onstore
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $3
+  call $~lib/array/Array<usize>#set:length_
+  local.get $3
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/referencesEqual<~lib/typedarray/Uint8Array> (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  (local $12 i32)
+  local.get $0
+  local.set $4
+  local.get $1
+  local.set $5
+  local.get $3
+  call $~lib/array/Array<usize>#get:length
+  local.set $6
+  local.get $6
+  i32.const 1
+  i32.and
+  i32.const 0
+  i32.eq
+  i32.const 1200
+  call $node_modules/@as-pect/assembly/assembly/internal/assert/assert
+  i32.const 0
+  drop
+  i32.const 0
+  local.set $7
+  loop $for-loop|0
+   local.get $7
+   local.get $6
+   i32.lt_s
+   local.set $8
+   local.get $8
+   if
+    local.get $4
+    local.get $5
+    local.get $3
+    local.get $7
+    call $~lib/array/Array<usize>#__uget
+    local.get $3
+    local.get $7
+    i32.const 1
+    i32.add
+    call $~lib/array/Array<usize>#__uget
+    call $node_modules/@as-pect/assembly/assembly/internal/Reflect/pairSeen
+    if
+     global.get $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.SUCCESSFUL_MATCH
+     return
+    end
+    local.get $7
+    i32.const 2
+    i32.add
+    local.set $7
+    br $for-loop|0
+   end
+  end
+  local.get $2
+  call $~lib/array/Array<usize>#get:length
+  local.set $7
+  i32.const 0
+  local.set $8
+  loop $for-loop|1
+   local.get $8
+   local.get $7
+   i32.lt_s
+   local.set $9
+   local.get $9
+   if
+    local.get $4
+    local.get $5
+    local.get $2
+    local.get $8
+    call $~lib/array/Array<usize>#__uget
+    local.get $2
+    local.get $8
+    i32.const 1
+    i32.add
+    call $~lib/array/Array<usize>#__uget
+    call $node_modules/@as-pect/assembly/assembly/internal/Reflect/pairSeen
+    if
+     global.get $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.DEFER_MATCH
+     return
+    end
+    local.get $8
+    i32.const 2
+    i32.add
+    local.set $8
+    br $for-loop|1
+   end
+  end
+  i32.const 0
+  drop
+  i32.const 1
+  drop
+  i32.const 0
+  drop
+  i32.const 0
+  drop
+  i32.const 1
+  drop
+  local.get $0
+  call $~lib/typedarray/Uint8Array#get:length
+  local.set $8
+  local.get $1
+  call $~lib/typedarray/Uint8Array#get:length
+  local.set $9
+  local.get $8
+  local.get $9
+  i32.ne
+  if
+   global.get $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.FAILED_MATCH
+   return
+  end
+  i32.const 0
+  local.set $10
+  loop $for-loop|2
+   local.get $10
+   local.get $8
+   i32.lt_s
+   local.set $11
+   local.get $11
+   if
+    local.get $0
+    local.get $10
+    call $~lib/typedarray/Uint8Array#__uget
+    local.get $1
+    local.get $10
+    call $~lib/typedarray/Uint8Array#__uget
+    local.get $2
+    local.get $3
+    call $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.equals<u8>
+    local.set $12
+    local.get $12
+    global.get $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.FAILED_MATCH
+    i32.eq
+    if
+     global.get $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.FAILED_MATCH
+     return
+    end
+    local.get $10
+    i32.const 1
+    i32.add
+    local.set $10
+    br $for-loop|2
+   end
+  end
+  local.get $3
+  local.get $4
+  call $~lib/array/Array<usize>#push
+  drop
+  local.get $3
+  local.get $5
+  call $~lib/array/Array<usize>#push
+  drop
+  global.get $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.SUCCESSFUL_MATCH
+  return
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.equals<~lib/typedarray/Uint8Array> (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
+  local.get $0
+  local.get $1
+  i32.eq
+  if
+   global.get $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.SUCCESSFUL_MATCH
+   return
+  end
+  i32.const 0
+  drop
+  i32.const 1
+  drop
+  local.get $0
+  i32.const 0
+  i32.eq
+  local.get $1
+  i32.const 0
+  i32.eq
+  i32.xor
+  if
+   global.get $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.FAILED_MATCH
+   return
+  end
+  i32.const 1
+  if (result i32)
+   i32.const 0
+   i32.eqz
+  else
+   i32.const 0
+  end
+  drop
+  i32.const 0
+  drop
+  local.get $0
+  local.get $1
+  local.get $2
+  local.get $3
+  call $node_modules/@as-pect/assembly/assembly/internal/Reflect/referencesEqual<~lib/typedarray/Uint8Array>
+  return
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.equals<~lib/typedarray/Uint8Array>@varargs (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
+  (local $4 i32)
+  (local $5 i32)
+  block $2of2
+   block $1of2
+    block $0of2
+     block $outOfRange
+      global.get $~argumentsLength
+      i32.const 2
+      i32.sub
+      br_table $0of2 $1of2 $2of2 $outOfRange
+     end
+     unreachable
+    end
+    i32.const 0
+    i32.const 2
+    i32.const 9
+    i32.const 7232
+    call $~lib/rt/__newArray
+    local.set $2
+   end
+   i32.const 0
+   i32.const 2
+   i32.const 9
+   i32.const 7264
+   call $~lib/rt/__newArray
+   local.set $3
+  end
+  local.get $0
+  local.get $1
+  local.get $2
+  local.get $3
+  call $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.equals<~lib/typedarray/Uint8Array>
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.toReflectedValue<u8> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  i32.const 0
+  drop
+  i32.const 0
+  i32.const 3
+  i32.eq
+  if (result i32)
+   i32.const 1
+  else
+   i32.const 0
+  end
+  drop
+  i32.const 0
+  i32.const 1
+  i32.const 7
+  i32.const 7344
+  local.get $0
+  f64.convert_i32_u
+  call $node_modules/@as-pect/assembly/assembly/internal/Reflect/createReflectedNumber
+  local.set $2
+  local.get $2
+  return
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.toReflectedValue<~lib/typedarray/Uint8Array> (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  i32.const 1
+  drop
+  local.get $0
+  i32.const 0
+  i32.eq
+  if
+   i32.const 1
+   i32.const 0
+   i32.const 0
+   i32.const 0
+   i32.const 0
+   i32.const 0
+   i32.const 4
+   i32.const 1
+   i32.const 3
+   i32.const 7296
+   i32.const 0
+   i32.const 0
+   i32.const 1
+   call $node_modules/@as-pect/assembly/assembly/internal/Reflect/createReflectedValue
+   return
+  end
+  i32.const 0
+  i32.eqz
+  drop
+  local.get $1
+  local.get $0
+  call $~lib/map/Map<usize,i32>#has
+  if
+   local.get $1
+   local.get $0
+   call $~lib/map/Map<usize,i32>#get
+   return
+  end
+  i32.const 0
+  drop
+  i32.const 0
+  drop
+  i32.const 0
+  drop
+  i32.const 0
+  drop
+  i32.const 0
+  drop
+  i32.const 1
+  drop
+  local.get $0
+  call $~lib/typedarray/Uint8Array#get:length
+  local.set $2
+  i32.const 0
+  i32.const 0
+  i32.const 0
+  i32.const 0
+  local.get $0
+  i32.const 0
+  local.get $2
+  i32.const 11
+  i32.const 3
+  i32.const 7296
+  i32.const 0
+  i32.const 1
+  i32.const 1
+  call $node_modules/@as-pect/assembly/assembly/internal/Reflect/createReflectedValue
+  local.set $3
+  local.get $1
+  local.get $0
+  local.get $3
+  call $~lib/map/Map<usize,i32>#set
+  drop
+  i32.const 0
+  local.set $4
+  loop $for-loop|0
+   local.get $4
+   local.get $2
+   i32.lt_s
+   local.set $5
+   local.get $5
+   if
+    local.get $0
+    local.get $4
+    call $~lib/typedarray/Uint8Array#__uget
+    local.set $6
+    local.get $6
+    local.get $1
+    call $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.toReflectedValue<u8>
+    local.set $7
+    local.get $3
+    local.get $7
+    call $node_modules/@as-pect/assembly/assembly/internal/Reflect/__aspectPushReflectedObjectValue
+    local.get $4
+    i32.const 1
+    i32.add
+    local.set $4
+    br $for-loop|0
+   end
+  end
+  local.get $3
+  return
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.toReflectedValue<~lib/typedarray/Uint8Array>@varargs (param $0 i32) (param $1 i32) (result i32)
+  block $1of1
+   block $0of1
+    block $outOfRange
+     global.get $~argumentsLength
+     i32.const 1
+     i32.sub
+     br_table $0of1 $1of1 $outOfRange
+    end
+    unreachable
+   end
+   i32.const 0
+   call $~lib/map/Map<usize,i32>#constructor
+   local.set $1
+  end
+  local.get $0
+  local.get $1
+  call $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.toReflectedValue<~lib/typedarray/Uint8Array>
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Actual/Actual.report<~lib/typedarray/Uint8Array> (param $0 i32)
+  (local $1 i32)
+  local.get $0
+  i32.const 1
+  global.set $~argumentsLength
+  i32.const 0
+  call $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.toReflectedValue<~lib/typedarray/Uint8Array>@varargs
+  local.set $1
+  local.get $1
+  call $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.attachStackTrace
+  local.get $1
+  call $node_modules/@as-pect/assembly/assembly/internal/Actual/reportActualReflectedValue
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Expected/Expected.report<~lib/typedarray/Uint8Array> (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  local.get $0
+  i32.const 1
+  global.set $~argumentsLength
+  i32.const 0
+  call $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.toReflectedValue<~lib/typedarray/Uint8Array>@varargs
+  local.set $2
+  local.get $2
+  call $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.attachStackTrace
+  local.get $2
+  local.get $1
+  call $node_modules/@as-pect/assembly/assembly/internal/Expected/reportExpectedReflectedValue
+ )
+ (func $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<~lib/typedarray/Uint8Array>#toStrictEqual (param $0 i32) (param $1 i32) (param $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  global.get $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.FAILED_MATCH
+  local.set $3
+  local.get $0
+  i32.load offset=4
+  local.get $1
+  i32.const 0
+  i32.const 2
+  global.set $~argumentsLength
+  i32.const 0
+  call $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.equals<~lib/typedarray/Uint8Array>@varargs
+  local.set $3
+  local.get $3
+  global.get $node_modules/@as-pect/assembly/assembly/internal/Reflect/Reflect.SUCCESSFUL_MATCH
+  i32.eq
+  local.set $4
+  local.get $0
+  i32.load offset=4
+  call $node_modules/@as-pect/assembly/assembly/internal/Actual/Actual.report<~lib/typedarray/Uint8Array>
+  local.get $1
+  i32.const 0
+  call $node_modules/@as-pect/assembly/assembly/internal/Expected/Expected.report<~lib/typedarray/Uint8Array>
+  local.get $4
+  local.get $0
+  i32.load
+  i32.xor
+  local.get $2
+  call $node_modules/@as-pect/assembly/assembly/internal/assert/assert
+  call $node_modules/@as-pect/assembly/assembly/internal/Actual/Actual.clear
+  call $node_modules/@as-pect/assembly/assembly/internal/Expected/Expected.clear
+ )
+ (func $start:assembly/__tests__/roundtrip.spec~anonymous|1~anonymous|3
+  (local $0 i32)
+  i32.const 5184
+  call $assembly/index/decode
+  local.set $0
+  local.get $0
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<~lib/typedarray/Uint8Array>
+  i32.const 0
+  i32.const 0
+  call $~lib/typedarray/Uint8Array#constructor
+  i32.const 560
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<~lib/typedarray/Uint8Array>#toStrictEqual
+ )
  (func $start:assembly/__tests__/roundtrip.spec~anonymous|1
   i32.const 4528
   i32.const 4688
@@ -5259,6 +6194,9 @@
   call $node_modules/@as-pect/assembly/assembly/internal/Test/it
   i32.const 4912
   i32.const 5104
+  call $node_modules/@as-pect/assembly/assembly/internal/Test/it
+  i32.const 5136
+  i32.const 7376
   call $node_modules/@as-pect/assembly/assembly/internal/Test/it
  )
  (func $start:assembly/__tests__/roundtrip.spec
@@ -5287,7 +6225,7 @@
   i32.const 4416
   call $node_modules/@as-pect/assembly/assembly/internal/Test/describe
   i32.const 4448
-  i32.const 5136
+  i32.const 7408
   call $node_modules/@as-pect/assembly/assembly/internal/Test/describe
  )
  (func $start:node_modules/@as-pect/assembly/assembly/internal/noOp~anonymous|0

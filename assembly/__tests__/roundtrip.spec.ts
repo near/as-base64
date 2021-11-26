@@ -100,4 +100,10 @@ describe('base64 encoding/decoding', (): void => {
   it('test pad 2', (): void => {
       testBase64('some long string', 'c29tZSBsb25nIHN0cmluZw==');
   });
+
+  it('test invalid', (): void => {
+      const encoded = "eyJuYW1lIjogIlR3aW4gRmxhbWVzICM0OS4gQWx5c29uICYgQ291cnRuZXkgQWxpYW5vIiwiaW1hZ2UiOiAiaHR0cHM6Ly9hcndlYXZlLm5ldC9vMDhSUVBTTnNoSzYybmNFc0NsRjRpWjNiMVpKYnRCSFdMTU54NVhfVFI0IiwiYWx0X2ltYWdlIjogImh0dHBzOi8vaXBmcy5pby9pcGZzL1FtTm1rdGNuMmRuQU5KaTI1Z0ZpYndtRVZ2ZVNZU3NBaGdLN01Ld1dBSnoyZXYiLCJkZXNjcmlwdGlvbiI6ICJUaXRsZTogQWx5c29uICYgQ291cnRuZXkgQWxpYW5vXG5cbkFydGlzdDogSnVzdGluIEF2ZXJzYW5vXG5cbk1lZGl1bTogQy00MSBQaG90b2dyYXBoaWMgUHJpbnRcblxuRGltZW5zaW9uczogMTbigJ0geCAyMOKAnVxuXG5QcmljZTogJDEsMDAwXG5cbkVkaXRpb246IDFcLzFcblxuWWVhcjogMjAxOFxuXG5BZGRpdGlvbmFsIEluZm9ybWF0aW9uOiBUd2lucyBhcmUgdGhvdWdodCB0byBicmluZyBsdWNrIHRvIHRob3NlIHdobyBzZWUgdGhlbSBhbmQgdG91Y2ggdGhlbSwgYW5kIHRoZXkgYXJlIHNob3dlcmVkIHdpdGggZ2lmdHMgYW5kIG1vbmV5IGZyb20gc3RyYW5nZXJzLiBUaGV5IGFyZSByZWdhcmRlZCBhcyBiZWFyZXJzIG9mIGhhcHBpbmVzcywgZ29vZCBsdWNrIGFuZCByaWNoZXMgZm9yIHRoZWlyIHBhcmVudHMsIGJ1dCBhbHNvIGFzIGZhbWlsaWFycyBvZiB0aGUgZ29kcywgd2l0aCBleHRyYW9yZGluYXJ5IHBvd2Vycy4iLCJwb3dlcmVkQnkiOiJodHRwczovL3d3dy5uYW1lbGVzcy5pby8ifQ,";
+      let decoded = decode(encoded);
+      expect(decoded).toStrictEqual(new Uint8Array(0))
+  });
 });

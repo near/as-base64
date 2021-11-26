@@ -173,11 +173,18 @@
          index = 0;
  
      for (i = 0; i < imax; i += 4) {
+       const b1 = getByte64(s, i)
+       const b2 = getByte64(s, i + 1)
+       const b3 = getByte64(s, i + 2)
+       const b4 = getByte64(s, i + 3)
+       if (b1 === -1 || b2 === -1 || b3 === -1 || b4 === -1){
+         return new Uint8Array(0)
+       }
        b10 =
-         (getByte64(s, i) << 18) |
-         (getByte64(s, i + 1) << 12) |
-         (getByte64(s, i + 2) << 6) |
-         getByte64(s, i + 3);
+         (b1 << 18) |
+         (b2 << 12) |
+         (b3 << 6) |
+         b4;
        x[index++] = b10 >> 16;
        x[index++] = (b10 >> 8) & 255;
        x[index++] = b10 & 255;
@@ -250,7 +257,11 @@
  
   // @ts-ignore: decorator
    @inline
-   function getByte64(s: string, i: u32): u32 {
-     return ALPHAVALUES[s.charCodeAt(i)];
+   function getByte64(s: string, i: u32): i32 {
+     const index = s.charCodeAt(i);
+     if(index < 0 || index > ALPHAVALUES.length){
+       return -1;
+     }
+     return ALPHAVALUES[index];
    }
 
